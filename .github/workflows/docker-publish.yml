@@ -3,8 +3,14 @@ name: Docker
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - Dockerfile
+      - .github/workflows/**
   pull_request:
     branches: [ "master" ]
+    paths:
+      - Dockerfile
+      - .github/workflows/**
 
 env:
   REGISTRY: ghcr.io
