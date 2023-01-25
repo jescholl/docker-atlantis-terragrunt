@@ -62,7 +62,9 @@ jobs:
         uses: docker/build-push-action@v3.3.0
         with:
           context: .
-          build-args: ATLANTIS_VERSION=${{ env.ATLANTIS_VERSION }},TERRAGRUNT_VERSION=${{ env.TERRAGRUNT_VERSION }}
+          build-args: |
+            ATLANTIS_VERSION=${{ env.ATLANTIS_VERSION }}
+            TERRAGRUNT_VERSION=${{ env.TERRAGRUNT_VERSION }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
