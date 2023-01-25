@@ -52,7 +52,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,pattern=${{ env.ATLANTIS_VERSION }}_${{ env.TERRAGRUNT_VERSION }},priority=1000
+            type=raw,value=${{ env.ATLANTIS_VERSION }}_${{ env.TERRAGRUNT_VERSION }},priority=1000
             type=ref,event=branch,enable=true,priority=600
 
       # Build and push Docker image with Buildx (don't push on PR)
