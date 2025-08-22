@@ -19,7 +19,7 @@ env:
   # renovate: datasource=docker depName=ghcr.io/runatlantis/atlantis
   ATLANTIS_VERSION: v0.35.1
   # renovate: datasource=github-releases depName=gruntwork-io/terragrunt
-  TERRAGRUNT_VERSION: v0.85.1
+  TERRAGRUNT_VERSION: v0.86.0
 
 jobs:
   build:
